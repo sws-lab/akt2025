@@ -1,0 +1,16 @@
+.gradle
+build
+target
+bin
+out
+gen
+*.iml
+.idea
+.settings
+.classpath
+.recommenders
+.project
+.metadata
+*.dot
+*.swp
+*.class
