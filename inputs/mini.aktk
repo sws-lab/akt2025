@@ -1,0 +1,10 @@
+print 5
+
+x = 4
+y =35 +  78- x
+print x+    78 -23
+
+# See on kommentaar
+print y
+y = y + 1 # kirjutame muutujasse uue väärtuse
+print y
