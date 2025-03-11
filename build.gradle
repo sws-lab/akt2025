@@ -20,6 +20,8 @@ dependencies {
     implementation group: 'com.google.guava', name: 'guava', version: '33.4.0-jre'
     implementation group: 'guru.nidi', name: 'graphviz-java-all-j2v8', version: '0.18.1'
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.16'
+    // week4
+    implementation group: 'org.eclipse.jdt', name: 'org.eclipse.jdt.core', version: '3.40.0'
 
     // initial
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
