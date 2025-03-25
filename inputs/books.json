@@ -1,0 +1,222 @@
+{
+  "books": [
+    {
+      "ISBN": "9985201523",
+      "title": "Jussikese Seitse Sõpra",
+      "authors": [
+        "Silvi Väljal"
+      ],
+      "genre": "lasteraamat",
+      "pageAmount": 24,
+      "language": "Eesti",
+      "price": 5.59,
+      "publisher": "Avita"
+    },
+    {
+      "ISBN": "9789949664504",
+      "title": "TÕDE JA ÕIGUS I",
+      "authors": [
+        "A. H. Tammsaare"
+      ],
+      "genre": "romaan",
+      "pageAmount": 616,
+      "language": "Eesti",
+      "price": 12.99,
+      "publisher": "Rahva Raamat AS"
+    },
+    {
+      "ISBN": "9789985342992",
+      "title": "Ivan Orava mälestused",
+      "authors": [
+        "Andrus Kivirähk"
+      ],
+      "genre": "romaan",
+      "pageAmount": 256,
+      "language": "Eesti",
+      "price": 17.70,
+      "publisher": "Varrak"
+    },
+    {
+      "ISBN": "9789949144969",
+      "title": "Pipi Pikksukk",
+      "authors": [
+        "Astrid Lindgren"
+      ],
+      "genre": "lasteraamat",
+      "pageAmount": 287,
+      "language": "Eesti",
+      "price": 23.45,
+      "publisher": "Sinisukk"
+    },
+    {
+      "ISBN": "9789949538720",
+      "title": "Toomas Nipernaadi",
+      "authors": [
+        "August Gailit"
+      ],
+      "genre": "romaan",
+      "pageAmount": 264,
+      "language": "Eesti",
+      "price": 14.99,
+      "publisher": "Hea Lugu"
+    },
+    {
+      "ISBN": "9789949386451",
+      "title": "Oskar ja asjad",
+      "authors": [
+        "Andrus Kivirähk"
+      ],
+      "genre": "lasteraamat",
+      "pageAmount": 296 ,
+      "language": "Eesti",
+      "price": 13.50,
+      "publisher": "Film Distribution OÜ"
+    },
+    {
+      "ISBN": "9789949449477",
+      "title": "Sipsik",
+      "authors": [
+        "Eno Raud",
+        "Edgar Valter"
+      ],
+      "genre": "lasteraamat",
+      "pageAmount": 112 ,
+      "language": "Eesti",
+      "price": 15.99,
+      "publisher": "Tammerraamat"
+    },
+    {
+      "ISBN": "9780451524935",
+      "title": 1984,
+      "authors": [
+        "George Orwell"
+      ],
+      "genre": "romaan",
+      "pageAmount": 328,
+      "language": "English",
+      "price": 6.85,
+      "publisher": "Signet Classic"
+    },
+    {
+      "ISBN": "9789949664399",
+      "title": "Pokuraamat",
+      "authors": [
+        "Edgar Valter"
+      ],
+      "genre": "lasteraamat",
+      "pageAmount": 144,
+      "language": "Eesti",
+      "price": 18.00,
+      "publisher": "Rahva Raamat AS"
+    },
+    {
+      "ISBN": "9789949348459",
+      "title": "Kevade",
+      "authors": [
+        "Oskar Luts"
+      ],
+      "genre": "romaan",
+      "pageAmount": 496,
+      "language": "Eesti",
+      "price": 19.50,
+      "publisher": "Sinisukk"
+    },
+    {
+      "ISBN": "9985304225",
+      "title": "Rehepapp",
+      "authors": [
+        "Andrus Kivirähk"
+      ],
+      "genre": "romaan",
+      "pageAmount": 200,
+      "language": "Eesti",
+      "price": 21.99,
+      "publisher": "Varrak"
+    },
+    {
+      "ISBN": "9789949616053",
+      "title": "Isamoodi unejutud",
+      "authors": [
+        "Ilmar Tomusk"
+      ],
+      "genre": "lasteraamat",
+      "pageAmount": 104,
+      "language": "Eesti",
+      "price": 22.99,
+      "publisher": "Tammeraamat"
+    },
+    {
+      "ISBN": "9789916681008",
+      "title": "Kaval Ants ja Vanapagan",
+      "authors": [
+        "Eno Raud",
+        "Joonas Sildre"
+      ],
+      "genre": "lasteraamat",
+      "pageAmount": 40,
+      "language": "Eesti",
+      "price": 19.99,
+      "publisher": "Tammeraamat"
+    },
+    {
+      "ISBN": "9789949383597",
+      "title": "Nimed Marmortahvlil",
+      "authors": [
+        "Albert Kivikas"
+      ],
+      "genre": "romaan",
+      "pageAmount": 352,
+      "language": "Eesti",
+      "price": 18.99,
+      "publisher": "CRITERA VMG OÜ"
+    },
+    {
+      "ISBN": "9789949272976",
+      "title": "Naksitrallid",
+      "authors": [
+        "Eno Raud"
+      ],
+      "genre": "lasteraamat",
+      "pageAmount": 229,
+      "language": "Eesti",
+      "price": 21.99,
+      "publisher": "Tänapäev"
+    },
+    {
+      "ISBN": "9789985993705",
+      "title": "Lembitu",
+      "authors": [
+        "Aristarch Sinkel"
+      ],
+      "genre": "romaan",
+      "pageAmount": 464,
+      "language": "Eesti",
+      "price": 18.53,
+      "publisher": "Revelex"
+    },
+    {
+      "ISBN": "9789949348749",
+      "title": "Suvi",
+      "authors": [
+        "Oskar Luts"
+      ],
+      "genre": "romaan",
+      "pageAmount": 544,
+      "language": "Eesti",
+      "price": 22.99,
+      "publisher": "Sinisukk"
+    },
+    {
+      "ISBN": "9789985791783",
+      "title": "Mees, kes teadis ussisõnu",
+      "authors": [
+        "Andrus Kivirähk"
+      ],
+      "genre": "romaan",
+      "pageAmount": 380,
+      "language": "Eesti",
+      "price": 19.99,
+      "publisher": "Eksa"
+    }
+  ]
+}
