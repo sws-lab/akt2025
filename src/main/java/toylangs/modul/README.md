@@ -47,3 +47,15 @@ Süntaksile kehtivad järgmised nõuded:
 5.  Programm koosneb avaldisest ning sulgudes võtmesõnast `mod`, tühikust ja naturaalarvust.
 6.  Avaldistes võib kasutada sulge, mis on kõige kõrgema prioriteediga.
 7.  Tühisümboleid (tühikud, tabulaatorid, reavahetused) tuleb ignoreerida, välja arvatud ülal nõutud.
+
+## Lõviosa: ModulCompiler
+
+Klassis *ModulCompiler* tuleb implementeerida meetod *compile*, mis kompileerib programmi CMa programmiks. 
+Kompileerimisele kehtivad järgmised nõuded:
+
+1.  Muutujate väärtused antakse *stack*'il etteantud järjekorras.
+2.  Programmi täitmise lõpuks peab *stack*'i pealmine element olema avaldise väärtus, mis on sama nagu *ModulEvaluator*-iga väärtustades.
+3.  Programmi täitmise lõpuks tohivad *stack*'il olla ainult etteantud muutujate algsed väärtused ja arvutatud avaldise väärtus.
+4.  Defineerimata muutuja kasutamisel visatakse *ModulException* **kompileerimise ajal**.
+
+> **PS.** Kuna astendajad on konstantsed, siis astendamise saab kompileerida `DUP` ja `MUL` instruktsioonide jadaks.

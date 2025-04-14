@@ -70,3 +70,12 @@ Süntaksile kehtivad järgmised nõuded:
 7.  Korduslause koosneb võtmesõnast `while`, sulgudes avaldisest ja lausest.
 8.  Katkestamislause koosneb võtmesõnast `escape`, millele võib järgneda koolon (`:`) ja positiivne arv. Kui viimased puuduvad, siis on see sama mis `escape:1`.
 9.  Tühisümboleid (tühikud, tabulaatorid, reavahetused) tuleb ignoreerida.
+
+## Lõviosa: VhileCompiler
+
+Klassis *VhileCompiler* tuleb implementeerida meetod *compile*, mis kompileerib lause CMa programmiks.
+Kompileerimisele kehtivad järgmised nõuded:
+
+1.  Muutujate väärtused antakse *stack*'il etteantud järjekorras.
+2.  Programmi täitmise lõpuks peavad *stack*'il olema ainult muutujate väärtused (etteantud järjekorras), mis vastavad täitmisjärgsele väärtuskeskkonnale ja on samad nagu *VhileEvaluator*-iga täites.
+3.  Defineerimata muutuja väärtustamisel või omistamisel visatakse *VhileException* **kompileerimise ajal**.

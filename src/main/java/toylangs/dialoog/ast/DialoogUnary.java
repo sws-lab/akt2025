@@ -1,5 +1,7 @@
 package toylangs.dialoog.ast;
 
+import cma.instruction.CMaBasicInstruction;
+
 import java.util.Arrays;
 import java.util.Map;
 import java.util.function.UnaryOperator;
@@ -27,6 +29,10 @@ public class DialoogUnary extends DialoogNode {
 
         public UnaryOperator<Object> toJava() {
             return javaOp;
+        }
+
+        public CMaBasicInstruction.Code toCMa() {
+            return CMaBasicInstruction.Code.valueOf(toString().substring(7).toUpperCase());
         }
 
         private final static Map<String, UnOp> symbolMap =

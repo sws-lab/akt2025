@@ -43,3 +43,13 @@ x / y recover 0 / z		(x / y recover 0) / z
 See tähendab ka seda, et `x/y*z` järel ei tohi olla taastumisavaldis, aga `x/(x*z)` järel võib!
 
 > **NB!** ANTLRi vasakrekursiooni elimineerimise maagia nõuab, et binaarne operatsioon algaks ja lõpeks rekursiivsete kutsetega (`expr … expr`). Taastumisavaldisega jagamine otseselt sellisel kujul ei ole. Meil õnnestus see lõpuni lahendada ainult kihilise avaldisgrammatikana.
+
+## Lõviosa: SafdiCompiler
+Klassis _SafdiCompiler_ tuleb implementeerida meetod _compile_, mis kompileerib avaldise CMa programmiks. Kompileerimisele kehtivad järgmised nõuded:
+
+1. Muutujate väärtused antakse stack’il etteantud järjekorras.
+2. Programmi täitmise lõpuks peab stack’i pealmine element olema avaldise väärtus, mis on sama nagu _SafdiEvaluator_-iga väärtustades.
+3. Programmi veatu täitmise lõpuks tohivad stack’il olla ainult etteantud muutujate algsed väärtused ja arvutatud avaldise väärtus.
+4. Vea korral lõpetatakse programmi töö koheselt (`HALT` instruktsioon). Sel juhul peavad stack’ile alles jääma ka vahetulemused. Nulliga jagamine tuleb avastada enne lugeja väärtustamist, seega `add(num(5), div(num(2), num(0)))` korral lõpetab töö stack’iga, kuhu on lisatud arv 5 (aga mitte 2).
+
+> **PS.** Jagamise juures võib olla vajalik jagajat kaks korda väärtustada – see on okei.
