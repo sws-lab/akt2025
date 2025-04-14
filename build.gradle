@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+    id 'antlr'
+    id 'idea'
 }
 
 compileJava.options.encoding = 'utf-8'
@@ -25,9 +27,41 @@ dependencies {
     // week5
     implementation group: 'org.apache.commons', name: 'commons-text', version: '1.13.0'
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.12.1'
+    // week7
+    antlr group: 'org.antlr', name: 'antlr4', version: '4.13.2'
 
     // initial
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     // week2
     testImplementation group: 'dk.brics', name: 'automaton', version: '1.12-4'
+}
+
+// ANTLR
+ext.antlr = [
+    destinationDir: 'src/gen/java'
+]
+
+generateGrammarSource {
+    outputDirectory = file(antlr.destinationDir)
+    arguments += ['-visitor', '-encoding', 'utf-8']
+}
+
+sourceSets {
+    main.java.srcDir antlr.destinationDir
+}
+
+idea {
+    module.generatedSourceDirs += file(antlr.destinationDir)
+}
+
+clean {
+    delete antlr.destinationDir
+}
+
+compileKotlin {
+    dependsOn(generateGrammarSource)
+}
+
+compileTestKotlin {
+    dependsOn(generateTestGrammarSource)
 }
