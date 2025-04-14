@@ -59,3 +59,9 @@ Kompileerimisele kehtivad järgmised nõuded:
 4.  Defineerimata muutuja kasutamisel visatakse *ModulException* **kompileerimise ajal**.
 
 > **PS.** Kuna astendajad on konstantsed, siis astendamise saab kompileerida `DUP` ja `MUL` instruktsioonide jadaks.
+
+## Meistriosa: ModulMaster
+
+Klassis *ModulMaster* tuleb implementeerida meetodid *eval* ja *compile*, mis on täpselt nagu alusosa ja lõviosa, kuid lisaks saavad efektiivselt hakkama väga suurte astendajatega.
+
+> **PS.** Kasuta kiire astendamise algoritmi (<http://kodu.ut.ee/~ahto/eio/2012.03.24/matem.pdf>).
