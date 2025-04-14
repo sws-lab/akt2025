@@ -32,3 +32,18 @@ Väärtustamisele kehtivad järgmised nõuded:
 
 > **NB!** Arvu *x* väärtuse mooduli *m* järgi saab arvutada valemiga *((x % m) + m) % m*, kus *%* tähistab Java jäägi operaatorit. Lihtsalt valemist *x % m* ei piisa, sest see ei anna negatiivsete väärtustega soovitud tulemust.
 > Alustuseks võid aga lihtsalt väärtustada avaldise osa: nelja esimese testi jaoks ei mängi modulaarne aritmeetika mingit rolli.
+
+## Põhiosa: ModulAst
+
+Failis *Modul.g4* tuleb implementeerida grammatika ja klassis *ModulAst* tuleb implementeerida meetod *parseTreeToAst*, mis teisendab parsepuu AST-iks. 
+Süntaksile kehtivad järgmised nõuded:
+
+1.  Arvuliteraalid koosnevad numbritest. Esimene number tohib olla 0 ainult siis, kui see on arvu ainuke number.
+2.  Muutuja koosneb vähemalt ühest ladina väiketähest, millele võivad lõpus järgneda alakriipsud (`_`).
+3.  Aritmeetilised operaatorid on unaarne miinus (`-`), liitmine (`+`), lahutamine (`-`), korrutamine (`*`) ja astendamine (`^`). 
+    Nende puhul kehtivad aritmeetiliste tehete standardsed assotsiatiivsused ja prioriteedid, mis kahanevas järjekorras on: 
+    astendamine, unaarne miinus, korrutamine, liitmine/lahutamine (sama prioriteediga).
+4.  Lahutamine tuleb AST-is esitada olemasolevate konstruktsioonide kaudu, kasutades samaväärsust: *x - y = x + (-y)*.
+5.  Programm koosneb avaldisest ning sulgudes võtmesõnast `mod`, tühikust ja naturaalarvust.
+6.  Avaldistes võib kasutada sulge, mis on kõige kõrgema prioriteediga.
+7.  Tühisümboleid (tühikud, tabulaatorid, reavahetused) tuleb ignoreerida, välja arvatud ülal nõutud.

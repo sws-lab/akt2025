@@ -55,3 +55,18 @@ while (x != 10) {
 ```
 
 Kui selles näites oleks `escape:2` asemel `escape:1`, siis see katkestaks ainult sisemise tsükli ja täitmise lõpuks oleks keskkonnas *x*-i väärtus 10.
+
+## Põhiosa: VhileAst
+
+Failis *Vhile.g4* tuleb implementeerida grammatika ja klassis *VhileAst* tuleb implementeerida meetod *parseTreeToAst*, mis teisendab parsepuu AST-iks.
+Süntaksile kehtivad järgmised nõuded:
+
+1.  Arvuliteraalid koosnevad numbritest. Esimene number tohib olla 0 ainult siis, kui see on arvu ainuke number. Nullist erinev arvuliteraal võib alata miinusmärgiga (`-`), tähistamaks negatiivset väärtust.
+2.  Muutuja koosneb vähemalt ühest ladina väiketähest.
+3.  Binaarsed operaatorid on liitmine (`+`), korrutamine (`*`), võrdus (`==`) ja mittevõrdus (`!=`). Aritmeetilised operaatorid on vasakassotsiatiivsed, võrdlusoperaatorid pole assotsiatiivsed. Nende puhul kehtivad tehete standardsed prioriteedid, mis kahanevas järjekorras on: korrutamine, liitmine, võrdus/mittevõrdus (sama prioriteediga).
+4.  Avaldistes võib kasutada sulge, mis on kõige kõrgema prioriteediga.
+5.  Omistamine koosneb muutuja nimest, võrdusmärgist (`=`) ja avaldisest.
+6.  Plokk koosneb loogelistest sulgudest (`{` `}`), mille vahel on lausete jada. Lausete jada koosneb lausetest (mida võib olla ka null tükki), mis on omavahel eraldatud semikoolonitega (`;`). Peale viimast lauset semikoolonit pole.
+7.  Korduslause koosneb võtmesõnast `while`, sulgudes avaldisest ja lausest.
+8.  Katkestamislause koosneb võtmesõnast `escape`, millele võib järgneda koolon (`:`) ja positiivne arv. Kui viimased puuduvad, siis on see sama mis `escape:1`.
+9.  Tühisümboleid (tühikud, tabulaatorid, reavahetused) tuleb ignoreerida.

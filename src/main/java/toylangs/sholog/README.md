@@ -30,3 +30,14 @@ Klassis _ShologEvaluator_ tuleb implementeerida meetod _eval_, mis väärtustab 
    Näiteks `eand(lit(false), error(1))` viskab väärtustamisel erindi koodiga 1.
 5. Laisad operaatorid käituvad standardselt, kuid teine argument väärtustatakse ainult siis, kui esimese argumendi väärtus ei määra juba tulemust ära (_short-circuit_ väärtustamine).  
    Näiteks `land(lit(false), error(1))` ei viska väärtustamisel erindit, vaid tagastab false.
+
+## Põhiosa: ShologAst
+Failis _Sholog.g4_ tuleb implementeerida grammatika ja klassis _ShologAst_ tuleb implementeerida meetod _parseTreeToAst_, mis teisendab parsepuu AST-iks. Süntaksile kehtivad järgmised nõuded:
+
+1. Tõene literaal on `T` ja väär literaal `F`.
+2. Muutuja koosneb vähemalt ühest ladina väiketähest.
+3. Vea-avaldis koosneb sümbolist `E` ja sellele järgnevast täisarvust, mis on selle veakood. Sümboli `E` ja täisarvu vahel ei ole lubatud tühisümbolid.
+4. Binaarsed operaatorid koosnevad kahest avaldisest, mille vahel on operaator: agar ja laisk _And_ on vastavalt `/\` ja `&&`, _Xor_ on `+`, agar ja laisk _Or_ on vastavalt `\/` ja `||`. Kõik on vasakassotsiatiivsed ja kahanevas järjekorras on nende prioriteedid: _And_, _Xor_, _Or_.
+5. Lisaks on lubatud unaarne eitusoperaator `~`, millele järgneb avaldis. Eitusoperaatori prioriteet on kõigist binaarsetest operaatoritest kõrgem ning see tuleb AST-is esitada olemasolevate konstruktsioonide kaudu, kasutades samaväärsust: `~x = x + T`.
+6. Avaldistes võib kasutada sulge, mis on kõige kõrgema prioriteediga.
+7. Tühisümboleid (tühikud, tabulaatorid, reavahetused) tuleb ignoreerida.
