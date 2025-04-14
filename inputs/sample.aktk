@@ -1,0 +1,22 @@
+/* Muutujate deklaratsioonid */
+var palk = -990; var nimi = "Teele";
+
+/* Funktsiooni väljakutse */
+print(nimi, palk);
+
+n = int(input("sisesta arv"));
+
+if n > 100 then {
+    print("norrmaalne!")
+} else {
+    print("lahja!!")
+};   /* NB! Ära unusta semikoolonit lausete vahel! */
+
+var i = 0;
+
+while i < n do {
+    if (i > (3)) then print(i) else pass;
+    i = i + 1
+};
+
+print("The End!") /* viimase lause lõpus pole semikoolonit */
