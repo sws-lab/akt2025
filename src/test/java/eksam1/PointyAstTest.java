@@ -107,7 +107,7 @@ public class PointyAstTest {
 
     @Test
     public void test07_prio() {
-        fail("See test avalikustatakse pärast eksamit! Ülejäänud tehete prioriteedid, näiteks *x-1 peab parsima kui (*x)+1, mitte kui *(x-1).");
+        fail("See test avalikustatakse pärast eksamit! Ülejäänud tehete prioriteedid, näiteks *x-1 peab parsima kui (*x)-1, mitte kui *(x-1).");
     }
 
     @Test
